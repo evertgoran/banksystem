@@ -9,6 +9,7 @@ void menu() {
 
 	while (choice != 10) {
 		//Main loop of program
+		//std::cout << "Testing" << "\n";
 	}
 	
 	
