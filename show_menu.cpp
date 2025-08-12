@@ -1,5 +1,6 @@
 #include <iostream>
 #include "clear_console.h"
+#include "./menu_components/register.h"
 
 int show_menu() {
 
@@ -12,7 +13,8 @@ int show_menu() {
 		"Log out",
 		"Create account",
 		"Show account information",
-		"Deposit", "Withdrawal",
+		"Deposit", 
+		"Withdrawal",
 		"Transfer between accounts",
 		"Transfer history",
 		"Exit"
@@ -29,13 +31,40 @@ int show_menu() {
 	
 
 
-	if (choice > 10 || choice < 1) {
+	/*if (choice > 10 || choice < 1) {
 		std::cout << "Invalid choice" << "\n";
-	}
+	}*/
 	clear_console();
 
-	if (choice == 5) {
-		std::cout << "New stage" << "\n";
+	switch (choice) {
+		case 1:
+			show_register();
+			break;
+		case 2:
+			//Log in/out();
+			break;
+		case 3:
+			//create_account();
+			break;
+		case 4:
+			//show_account_info();
+			break;
+		case 5:
+			std::cout << "New stage" << "\n";
+			//deposit();
+			break;
+		case 6:
+			//withdrawal();
+			break;
+		case 7:
+			//transfer();
+			break;
+		case 8:
+			//transfer_history();
+			break;
+		default:
+			std::cout << "Invalid choice... Try again!" << "\n";
+			break;
 	}
 
 	return choice;
